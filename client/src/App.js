@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-
+import useBackgroundColor from './hooks/useBackgroundColor'
 import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
@@ -10,6 +10,7 @@ import "./App.css";
 function App() {
   // array of plants that have been added to the cart
   const [cart, setCart] = useState([]);
+  useBackgroundColor();
 
   // add a plant to the cart
   const addToCart = (plant) => {
